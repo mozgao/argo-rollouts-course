@@ -8,10 +8,10 @@ spec:
     matchLabels:
       app: simple-color-app
   strategy:
-    canary:
-      steps:
-        - setWeight: 20
-        - pause: {}
+      canary:
+        steps:
+          - setWeight: 20
+          - pause: {}
   template:
     metadata:
       labels:
@@ -22,4 +22,5 @@ spec:
           image: lmacademy/simple-color-app:1.0.0
           env:
             - name: APP_COLOR
-              value: 'orange'
+              value: 'blue'
+    
