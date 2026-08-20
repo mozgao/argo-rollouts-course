@@ -19,7 +19,7 @@ spec:
           image: lmacademy/simple-color-app:1.0.0
           env:
             - name: APP_COLOR
-              value: 'green'
+              value: 'blue'
   strategy:
     blueGreen:
       activeService: rollout-bluegreen-active
