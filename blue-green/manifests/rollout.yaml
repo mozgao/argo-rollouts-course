@@ -5,6 +5,7 @@ metadata:
   namespace: bluegreen-lab
 spec:
   replicas: 5
+  revisionHistoryLimit: 5
   selector:
     matchLabels:
       app: rollout-bluegreen
