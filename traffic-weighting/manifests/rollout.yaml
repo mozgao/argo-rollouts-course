@@ -18,12 +18,12 @@ spec:
           image: lmacademy/simple-color-app:1.0.0
           env:
             - name: APP_COLOR
-              value: green
+              value: yellow
   strategy:
     canary:
       canaryService: rollout-gateway-canary
       stableService: rollout-gateway-stable
-      dynamicStableScale: true
+      dynamicStableScale: true #Dynamically scale down stable env to avodi over-provisionig
       trafficRouting:
         plugins:
           argoproj-labs/gatewayAPI:
