@@ -18,7 +18,7 @@ spec:
           image: lmacademy/simple-color-app:1.0.0
           env:
             - name: APP_COLOR
-              value: yellow
+              value: green
   strategy:
     canary:
       canaryService: rollout-gateway-canary
