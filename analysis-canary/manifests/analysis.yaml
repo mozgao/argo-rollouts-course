@@ -10,7 +10,7 @@ spec:
     - name: success-rate
       interval: 5s
       count: 60
-      successCondition: result[0] >= 0.95
+      successCondition: result[0] >= 0.95 # This decides if we go forward or not
       failureLimit: 3
       provider:
         prometheus:

@@ -13,16 +13,16 @@ spec:
       labels:
         app: analysis-canary
       annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/port: '3000'
-        prometheus.io/path: '/metrics'
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "3000"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
         - name: analysis-canary
           image: lmacademy/simple-color-app:1.1.0
           env:
             - name: ERROR_RATE
-              value: '0.1'
+              value: "0.05" # Here % of requests will be failed by the app
             - name: APP_COLOR
               value: red
   strategy:
