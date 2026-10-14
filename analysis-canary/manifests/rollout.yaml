@@ -22,9 +22,9 @@ spec:
           image: lmacademy/simple-color-app:1.1.0
           env:
             - name: ERROR_RATE
-              value: "0.05" # Here % of requests will be failed by the app
+              value: "0.01" # Here % of requests will be failed by the app
             - name: APP_COLOR
-              value: red
+              value: blue
   strategy:
     canary:
       canaryService: analysis-canary-canary
@@ -32,7 +32,7 @@ spec:
       steps:
         - setWeight: 20
         - pause:
-            duration: 3m
+            duration: 1m
         - analysis:
             templates:
               - templateName: success-rate

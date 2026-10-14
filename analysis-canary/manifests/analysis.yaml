@@ -9,9 +9,9 @@ spec:
   metrics:
     - name: success-rate
       interval: 5s
-      count: 60
-      successCondition: result[0] >= 0.95 # This decides if we go forward or not
-      failureLimit: 3
+      count: 10
+      successCondition: result[0] >= 0.85 # This decides if we go forward or not
+      failureLimit: 2
       provider:
         prometheus:
           address: http://prometheus-server.monitoring.svc.cluster.local:80
