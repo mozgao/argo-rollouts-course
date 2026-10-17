@@ -13,18 +13,18 @@ spec:
       labels:
         app: analysis-blue-green
       annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/port: '3000'
-        prometheus.io/path: '/metrics'
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "3000"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
         - name: analysis-blue-green
           image: lmacademy/simple-color-app:1.1.0
           env:
             - name: ERROR_RATE
-              value: '0.03'
+              value: "0.01"
             - name: APP_COLOR
-              value: pink
+              value: blue
   strategy:
     blueGreen:
       activeService: blue-green-active
